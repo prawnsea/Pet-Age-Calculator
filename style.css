@@ -1,0 +1,54 @@
+body {
+    background: linear-gradient(to right, #BF6b04, white) !important;
+}
+
+
+.navbar{
+    background-color:rgba(255, 255, 255, 0.25) !important;
+    border-radius: 10px;
+
+}
+.navbar-brand{
+    font-family: 'Playpen Sans', cursive;
+    font-size: 1.5rem;
+    font-weight: bold
+
+}
+
+#iconPaw{
+    width: 25px;
+    height: 25px;
+    color: #BF6b04 !important;
+
+}
+
+.heading{
+    font-family: 'Playpen Sans', cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+
+}
+
+/* Inputs */
+input[type="number"] {
+    outline: none;
+    width: 200px;
+    height: 30px;
+    box-sizing: border-box;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    
+}
