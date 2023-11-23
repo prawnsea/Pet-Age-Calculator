@@ -22,26 +22,20 @@
         <div class="calculator">
             <div>
                 <input id="pet-age" value="1" type="number" autofocus></input>
-                <select name=from-animal id=from-animal aria-placeholder="Select">
+                <select name=to-animal id=to-animal aria-placeholder="Select">
                     <option value="humanOption">Human</option>
-                    <option value="catOption">Cat</option>
-                    <option value="dogOption">Dog</option>
-                    <option value="goatOption">Goat</option>
-                    <option value="chickenOption">Chicken</option>
-                    <option value="rabbitOption">Rabbit</option>
-
                 </select><span class="year">
                 </span>
             </div>
             <div>
-                <input id="pet-age-converted" value="10.5" readonly></input>
-                <select name=to-animal id=to-animal>
-                    <option value="catOption">Cat</option>
-                    <option value="humanOption">Human</option>
-                    <option value="dogOption">Dog</option>
-                    <option value="goatOption">Goat</option>
-                    <option value="chickenOption">Chicken</option>
-                    <option value="rabbitOption">Rabbit</option>
+                <input id="pet-age-converted" type="number"></input>
+                <select name=from-animal id=from-animal>
+                    <option value="Cat">Cat</option>
+                    <option value="Dog">Dog</option>
+                    <option value="Goat">Goat</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Rabbit">Rabbit</option>
+
                 </select><span class="year"></span>
             </div>
         </div>
@@ -59,11 +53,11 @@
                     <div class="card-back" id="card-back">
                         <div class="card-except">
                             <h2 class="from-fun-fact-head card-heading">Human Fun Facts</h2>
-                            <p id="facts-card-1">
-                                Checkout our collection of weird and interesting facts. We promise, you'll be surprised!
+                            <p id="humanCard">
+                                Check out interesting facts about us Humans!
                             </p>
                         </div>
-                        <a id="btn-show-fact-card-1" href="#">Show Fact</a>
+                        <a id="humanBTN" href="#">Show Fact</a>
                     </div>
                 </div>
             </div>
@@ -71,21 +65,20 @@
             <div class="card-wrap">
                 <div class="card">
                     <div class="card-front">
-                        <div class="card-img" id="card-img-2" style="background-image: url('/Images/wp7313761.jpg');">
+                        <div class="card-img" id="card-img-2" style="background-image: url('/Images/Catto.jpg')">
                         </div>
-                        <div class="card-info">
-                            <h2 class="to-fun-fact-head">Cats Fun Facts</h2>
+                        <div class=" card-info">
+                            <h2 class="to-fun-fact-head">Pets Fun Facts</h2>
                         </div>
                     </div>
                     <div class="card-back">
                         <div class="card-except">
-                            <h2 class="to-fun-fact-head">Cats Fun Facts</h2>
-                            <p id="facts-card-2">
-                                Checkout our collection of weird and interesting facts. We promise, you'll be
-                                surprised!.
+                            <h2 class="to-fun-fact-head">Pets Fun Facts</h2>
+                            <p id="animalCard">
+                                Check out interesting facts about your Pets!
                             </p>
                         </div>
-                        <a id="btn-show-fact-card-2" href="#">Show Fact</a>
+                        <a id="animalBTN" href="#">Show Fact</a>
                     </div>
                 </div>
             </div>
