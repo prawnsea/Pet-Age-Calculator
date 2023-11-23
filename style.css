@@ -1,54 +1,220 @@
-body {
-    background: linear-gradient(to right, #BF6b04, white) !important;
-}
-
-
-.navbar{
-    background-color:rgba(255, 255, 255, 0.25) !important;
-    border-radius: 10px;
-
-}
-.navbar-brand{
-    font-family: 'Playpen Sans', cursive;
-    font-size: 1.5rem;
-    font-weight: bold
-
-}
-
-#iconPaw{
-    width: 25px;
-    height: 25px;
-    color: #BF6b04 !important;
-
-}
-
-.heading{
-    font-family: 'Playpen Sans', cursive;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 2rem;
-
-}
-
-/* Inputs */
-input[type="number"] {
-    outline: none;
-    width: 200px;
-    height: 30px;
+* {
     box-sizing: border-box;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+body {
     margin: 0;
+    display: flex;
+    flex-direction: column wrap;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    background: linear-gradient(to right, #FFB6C1, #87CEFA);
+    background-size: cover;
+    background-attachment: fixed;
+ }
+
+
+
+ h1, h2, h3 {
+    letter-spacing: 2px;
+    color: #FFB6C1;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: center;
+    margin-top: 0;
+    
+ }
+
+h2 {
+    text-transform: capitalize;
+
+ }
+
+ h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #87CEFA;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }
 
-input[type="number"] {
-    -moz-appearance: textfield;
+.question {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 90%;
+    margin: 1em auto;
+    align-content: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+.facts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5em;
     
 }
+
+
+
+#facts-card-1, #facts-card-2 {
+  font-size: 1.3rem;
+  color: rgb(109, 107, 102);
+  text-align: center;
+}
+
+.calculator {
+  margin: 1em auto;
+  padding-left: 2em;
+}
+
+input {
+  padding: .25em;
+  margin-bottom: .75em;
+  transform: scale(1);
+  transition: transform 250ms;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(109, 107, 102);
+  max-width: 4em;
+}
+
+input:focus {
+  transform: scale(1.1);
+}
+
+select {
+  padding: .25em;
+  margin-left: 1em;
+  margin-bottom: .75em;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: rgb(109, 107, 102);
+}
+
+.year {
+  font-size: 1.2rem;
+  color: rgb(109, 107, 102);
+  
+}
+
+.card-wrap {
+  flex-direction: row;
+  width: 220px;
+  height: 320px;
+  perspective: 1000px;
+  flex: 1;
+  margin: 15px 15px 30px;
+  min-width: 300px;
+  max-width: 380px;
+}
+
+
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d; 
+}
+
+.card-wrap:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-img {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-info {
+  padding: 30px 15px 15px;
+}
+
+.card-info h2{
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding-top: 5px;
+}
+
+.card-back {
+  background-color: #ffffff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.card-back h2{
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-top: 5px;
+}
+
+.card-back p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.card-back a{
+  text-decoration: none;
+  color: #ffffff;
+  background-color: rgb(255, 100, 100);
+  padding: 10px 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8em;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.card-back a:hover {
+  color: rgb(255, 100, 100);
+  background-color: lightgray;
+}
+
+
+@media (min-width: 750px) {
+    .facts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0;
+    }
+
+}
+
+
+ 

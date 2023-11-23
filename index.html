@@ -1,51 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pet Age Calculator</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@200;300&display=swap');
-    </style>
-
+    <title>Pet Age Calculator</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Pet Age Calculator</a>
-            <img id="iconPaw" src="/SVGs/paw-solid.svg" alt="pawIcon">
+    <div class="container">
+        <div>
+            <h1>Pet Age Calculator</h1>
         </div>
-    </nav>
-    <header>
-        <h2 class="heading">How old is your Pet in Human age?</h2>
-    </header>
-    <main>
-        <input type="number" id="petInput">
-        <input type="number" id="humanInput">
-        <select name="Cat" id=""></select>
-    </main>
+        <div>
 
+            <h2 class="question">Calculate your Pet's age!</h2>
+        </div>
+        <div class="calculator">
+            <div>
+                <input id="pet-age" value="1" type="number" autofocus></input>
+                <select name=from-animal id=from-animal aria-placeholder="Select">
+                    <option value="humanOption">Human</option>
+                    <option value="catOption">Cat</option>
+                    <option value="dogOption">Dog</option>
+                    <option value="goatOption">Goat</option>
+                    <option value="chickenOption">Chicken</option>
+                    <option value="rabbitOption">Rabbit</option>
 
+                </select><span class="year">
+                </span>
+            </div>
+            <div>
+                <input id="pet-age-converted" value="10.5" readonly></input>
+                <select name=to-animal id=to-animal>
+                    <option value="catOption">Cat</option>
+                    <option value="humanOption">Human</option>
+                    <option value="dogOption">Dog</option>
+                    <option value="goatOption">Goat</option>
+                    <option value="chickenOption">Chicken</option>
+                    <option value="rabbitOption">Rabbit</option>
+                </select><span class="year"></span>
+            </div>
+        </div>
+        <div class="facts">
 
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="card-img" id="card-img-1" style="background-image: url('/Images/HumanPic.jpg');">
+                        </div>
+                        <div class="card-info">
+                            <h2 class="from-fun-fact-head">Human Fun Facts</h2>
+                        </div>
+                    </div>
+                    <div class="card-back" id="card-back">
+                        <div class="card-except">
+                            <h2 class="from-fun-fact-head card-heading">Human Fun Facts</h2>
+                            <p id="facts-card-1">
+                                Checkout our collection of weird and interesting facts. We promise, you'll be surprised!
+                            </p>
+                        </div>
+                        <a id="btn-show-fact-card-1" href="#">Show Fact</a>
+                    </div>
+                </div>
+            </div>
 
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-front">
+                        <div class="card-img" id="card-img-2" style="background-image: url('/Images/wp7313761.jpg');">
+                        </div>
+                        <div class="card-info">
+                            <h2 class="to-fun-fact-head">Cats Fun Facts</h2>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-except">
+                            <h2 class="to-fun-fact-head">Cats Fun Facts</h2>
+                            <p id="facts-card-2">
+                                Checkout our collection of weird and interesting facts. We promise, you'll be
+                                surprised!.
+                            </p>
+                        </div>
+                        <a id="btn-show-fact-card-2" href="#">Show Fact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
